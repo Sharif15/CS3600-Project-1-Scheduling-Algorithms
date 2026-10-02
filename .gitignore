@@ -64,3 +64,16 @@ dkms.conf
 # Compiled PDF output (recommended to ignore build artifacts)
 *.pdf
 *.class
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Submission bundle archives
+*.bundle
