@@ -14,7 +14,7 @@ pri: compile
 	java Driver pri schedule.txt
 	
 pri-rr: compile
-	java Drive pri-rr schedule.txt
+	java Driver pri-rr schedule.txt
 
 
 clean:
