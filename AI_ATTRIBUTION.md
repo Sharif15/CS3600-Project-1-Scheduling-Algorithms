@@ -144,4 +144,53 @@ $$96.25\text{ ms} = 75.00\text{ ms} + 21.25\text{ ms} \quad \checkmark$$
 | **Edge-Case Resilience** | Static Analysis | **APPROVED** | Division by zero prevented via `totalTasks > 0` guard; empty queue safely returns `null`. |
 | **Build Pipeline** | Make + JDK 17 | **APPROVED** | `javac *.java` compiles with 0 errors; `make pri` runs seamlessly. |
 
+
+---
+
+# Academic Integrity & Generative AI Attribution Statement: Round Robin (RR)
+
+## Course & Project Information
+* **Student Author**: Gustavo Valencia
+* **Course**: CS3600-001 Operating Systems
+* **Project**: Project 1 — CPU Process Scheduling Algorithms (Round Robin Section)
+* **Term**: Fall 2026
+* **Branch**: `gustavo-rr`
+* **Target Source**: [`java/RR.java`](java/RR.java)
+
+---
+
+## 1. Statement of Academic Integrity & Authorship
+In accordance with university academic integrity policies and principles of ethical AI usage in academia, this document provides full disclosure of generative AI and automated coding assistants utilized during the completion of this project.
+
+The student affirms:
+1. **Conceptual Understanding**: I fully understand every algorithm, data structure, and line of code submitted in this project, and I am capable of explaining, defending, and modifying the implementation in an oral examination or code defense.
+2. **Role of AI as a Pedagogical Tutor & Pair Programmer**: AI tools were utilized strictly for conceptual explanation, mathematical verification, peer review, and syntax assistance, rather than as a substitute for learning or unexamined copy-pasting.
+3. **No Plagiarism**: All algorithmic logic reflects the required curriculum from *Operating System Concepts* (10th Edition, Silberschatz et al., Chapter 5) and the instructor's provided specifications.
+
+---
+
+## 2. Student Methodology: How AI Was Used to Learn and Author Code
+
+Throughout this project, AI was utilized as an **interactive pedagogical workbench**, emphasizing active learning over passive code generation:
+
+1. **Mathematical & Conceptual Modeling**:
+   - I used Google Gemini as a Socratic tutor to review preemptive CPU scheduling principles from *Operating System Concepts* (Silberschatz Chapter 5).
+   - Before completing the code, we modeled discrete-event metrics under simultaneous arrival at t=0 to ensure my time-sliced tracking accounts for divergent waiting times and initial response timestamps perfectly.
+
+2. **Hands-On Coding & Debugging**:
+   - Rather than copy-pasting bulk files, I manually typed and maintained the `java/RR.java` structure inside Visual Studio Code.
+   - The AI assisted in outlining separate structural tracking elements (`originalBursts` and `responseTimes` HashMaps) to maintain the state data safely as the CPU simulation cycles and mutates remaining task bursts.
+
+---
+
+## 3. Tool Inventory & Scope of Use
+
+### A. Google Gemini
+* **Role**: Interactive Socratic tutor and pair programming workbench.
+* **Scope of Usage**:
+  * Provided structural walkthroughs of circular FIFO queue rotation (`queue.remove(0)` and `queue.add()`).
+  * Assisted in state-retention strategy mapping to safeguard metrics across time-quantum preemption steps.
+  * Guided local Git branch creation (`gustavo-rr`) and synchronization procedures to protect team file layouts.
+
+
 **FINAL STAMP: VERIFIED & APPROVED FOR SUBMISSION**
