@@ -11,7 +11,7 @@
 * **Student Author**: Christopher Hammer (`Chammer111`)
 * **Course**: CS3600-001 Operating Systems (Fall 2026)
 * **Branch**: `Hammer-fork` ([`https://github.com/Sharif15/CS3600-Project-1-Scheduling-Algorithms/tree/Hammer-fork`](https://github.com/Sharif15/CS3600-Project-1-Scheduling-Algorithms/tree/Hammer-fork))
-* **Target Source**: [`java/Priority.java`](java/Priority.java)
+* **Target Source**: [`java/Priority.java`](../../java/Priority.java)
 
 ---
 

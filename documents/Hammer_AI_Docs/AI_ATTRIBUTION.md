@@ -13,7 +13,7 @@
 * **Project**: Project 1 — CPU Process Scheduling Algorithms (Priority Scheduling Section)
 * **Term**: Fall 2026
 * **Branch**: `Hammer-fork` ([`https://github.com/Sharif15/CS3600-Project-1-Scheduling-Algorithms/tree/Hammer-fork`](https://github.com/Sharif15/CS3600-Project-1-Scheduling-Algorithms/tree/Hammer-fork))
-* **Target Source**: [`java/Priority.java`](java/Priority.java)
+* **Target Source**: [`java/Priority.java`](../../java/Priority.java)
 
 ---
 
@@ -54,7 +54,7 @@ Throughout this project, AI was utilized as an **interactive pedagogical workben
 
 ## 3. Formal Mathematical Framework & Mapping to Java Abstractions
 
-To bridge the gap between abstract mathematical definitions and high-level object-oriented Java code, the implementation of [`java/Priority.java`](java/Priority.java) was explicitly derived from formal algebraic structures and discrete-event state machines:
+To bridge the gap between abstract mathematical definitions and high-level object-oriented Java code, the implementation of [`java/Priority.java`](../../java/Priority.java) was explicitly derived from formal algebraic structures and discrete-event state machines:
 
 ### 3.1. Algebraic Signature of the Scheduler
 The Java interface `Algorithm` is formalized as an algebraic signature:
