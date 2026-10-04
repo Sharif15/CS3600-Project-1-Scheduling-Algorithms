@@ -3,6 +3,7 @@
 ## Team member
 Sharif Islam <br>  
 Christopher Hammer
+Christopher Harris
 
 ## Getting started
 
