@@ -105,7 +105,7 @@ public class PriorityRR implements Algorithm{
     	
     	
          if (numberOfTasks > 0) {
-            System.out.println("\n--- RR Performance Metrics ---");
+            System.out.println("\n--- Priority RR Performance Metrics ---");
             System.out.printf("Average Turnaround Time: %.2f ms\n", (totalTurnaroundTime / numberOfTasks));
             System.out.printf("Average Waiting Time: %.2f ms\n", (totalWaitingTime / numberOfTasks));
             System.out.printf("Average Response Time: %.2f ms\n", (totalResponseTime / numberOfTasks));
