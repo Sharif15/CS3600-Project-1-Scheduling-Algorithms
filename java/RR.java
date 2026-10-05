@@ -7,8 +7,9 @@ public class RR implements Algorithm {
     private final int TIME_QUANTUM = 10; // Explicitly set to 10 ms per specifications
 
     // Performance metric tracking structures
-    private Map<String, Integer> originalBursts = new HashMap<>();
-    private Map<String, Integer> responseTimes = new HashMap<>();
+    // Changing key to taskID to preserve uniqueness
+    private Map<Integer, Integer> originalBursts = new HashMap<>();
+    private Map<Integer, Integer> responseTimes = new HashMap<>();
 
     // Constructor 
     public RR(List<Task> queue) {
@@ -18,7 +19,7 @@ public class RR implements Algorithm {
 
         // Snapshot the original burst before any preemption mutations occur
         for (Task task : queue) {
-            originalBursts.put(task.getName(), task.getBurst());
+            originalBursts.put(task.getTid(), task.getBurst());
         }
     }
 
@@ -34,11 +35,11 @@ public class RR implements Algorithm {
         // Core discrete-event simulation loop
         while (!queue.isEmpty()) {
             Task currentTask = pickNextTask();
-            String taskName = currentTask.getName();
+            int taskID = currentTask.getTid();
 
             // Track Response Time: Log timestamp only on the task's very first CPU interaction
-            if (!responseTimes.containsKey(taskName)) {
-                responseTimes.put(taskName, currentTime);
+            if (!responseTimes.containsKey(taskID)) {
+                responseTimes.put(taskID, currentTime);
                 totalResponseTime += currentTime; // R_i = t_first_run - A_i (where arrival A_i = 0)
             }
 
@@ -51,13 +52,13 @@ public class RR implements Algorithm {
                 currentTime += currentBurst;
 
                 int turnaroundTime = currentTime; // C_i - A_i (Arrival is 0)
-                int originalBurst = originalBursts.get(taskName);
+                int originalBurst = originalBursts.get(taskID);
                 int waitingTime = turnaroundTime - originalBurst; // W_i = C_i - A_i - B_i
 
                 totalTurnaroundTime += turnaroundTime;
                 totalWaitingTime += waitingTime;
 
-                System.out.println("Task " + taskName + " finished.");
+                System.out.println("Task " + currentTask.getName() + " finished.");
             } else {
                 // Task is preempted
                 CPU.run(currentTask, TIME_QUANTUM);
